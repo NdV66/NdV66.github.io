@@ -1,0 +1,114 @@
+@import "_variables.scss";
+@import "_generic.scss";
+@import "_buttons.scss";
+@import "_navbar.scss";
+@import "_footer.scss";
+
+$NAVBAR_HEIGHT: 80px;
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-Light.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-Bold.ttf);
+    font-weight: 600;
+}
+
+body {
+    background: $BACKGROUND_COLOR;
+    font-size: $BASE_FONT_SIZE;
+    font-family: Comfortaa;
+    font-weight: 400;
+}
+
+main {
+    background-color: $BACKGROUND_COLOR_ACTIVE;
+}
+
+a:active, a:visited, a:hover {
+    color: $THEME_COLOR_PRIMARY;
+}
+
+a, a:link {
+    color: $THEME_COLOR_ACTIVE;
+}
+
+h1 {
+    font-size: $BASE_FONT_SIZE * 3;
+    font-family: Comfortaa;
+    margin-bottom: 1rem!important;
+    color: $WHITE;
+    border-bottom: 1px solid $WHITE;
+}
+
+h2 {
+    font-size: $BASE_FONT_SIZE * 2;
+    font-family: Comfortaa;
+    margin-bottom: 1rem!important;
+    color: $THEME_COLOR_PRIMARY;
+}
+
+h4 {
+    font-size: $BASE_FONT_SIZE * 1.4;
+    font-family: Comfortaa;
+    margin-bottom: 1rem!important;
+}
+
+.main-content {
+    $padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 3rem!important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1480px;
+    }
+}
+
+.jumbotron {
+    background-image: url(/images/1bg.svg);
+    border-radius: 0px;
+    margin-top: 40px;
+
+    img {
+        border-radius: 50%;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+.animation-icon {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .icon-lines {
+    fill: none;
+    stroke: $THEME_COLOR_PRIMARY;
+    stroke-width: 2;
+  }
