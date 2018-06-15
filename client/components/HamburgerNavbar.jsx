@@ -35,9 +35,9 @@ export class HamburgerNavbar extends React.Component {
                     <NavbarToggler onClick={() => this.toggle()} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className='ml-auto' navbar>
-                            <NavbarItem link={'#'} text={'Start'} icon={'home'} id={'start'}/>
-                            <NavbarItem link={'#'} text={'Blog'} icon={'book'} id={'blog'}/>
-                            <NavbarItem link={'#'} text={'O mnie'} icon={'user'} id={'about'}/>
+                            <NavbarItem link={'#'} text={'Home'} icon={'home'} id={'home'}/>
+                            <NavbarItem link={'#'} text={'Technologies'} icon={'book'} id={'tech'}/>
+                            <NavbarItem link={'#'} text={'Projects'} icon={'user'} id={'projects'}/>
                         </Nav>
                     </Collapse>
             </Container>

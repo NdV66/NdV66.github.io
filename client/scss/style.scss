@@ -24,11 +24,24 @@ $NAVBAR_HEIGHT: 80px;
     font-weight: 600;
 }
 
+@font-face {
+    font-family: Amatic;
+    src: url(../fonts/AmaticSC-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Amatic;
+    src: url(../fonts/AmaticSC-Bold.ttf);
+    font-weight: 600;
+}
+
 body {
     background: $BACKGROUND_COLOR;
     font-size: $BASE_FONT_SIZE;
     font-family: Comfortaa;
-    font-weight: 400;
+    font-weight: 100;
+    line-height: 21pt;
 }
 
 main {
@@ -44,23 +57,23 @@ a, a:link {
 }
 
 h1 {
-    font-size: $BASE_FONT_SIZE * 3;
-    font-family: Comfortaa;
+    font-size: $BASE_FONT_SIZE * 4.2;
+    font-family: Amatic;
     margin-bottom: 1rem!important;
     color: $WHITE;
     border-bottom: 1px solid $WHITE;
 }
 
 h2 {
-    font-size: $BASE_FONT_SIZE * 2;
-    font-family: Comfortaa;
+    font-size: $BASE_FONT_SIZE * 3;
+    font-family: Amatic;
     margin-bottom: 1rem!important;
     color: $THEME_COLOR_PRIMARY;
 }
 
 h4 {
     font-size: $BASE_FONT_SIZE * 1.4;
-    font-family: Comfortaa;
+    font-family: Amatic;
     margin-bottom: 1rem!important;
 }
 
@@ -96,19 +109,29 @@ h4 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 5s linear alternate infinite;
-  }
+    }
 
-  @keyframes dash {
+@keyframes dash {
     from {
-      stroke-dashoffset: 1000;
+        stroke-dashoffset: 1000;
     }
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
-  }
+}
 
-  .icon-lines {
-    fill: none;
-    stroke: $THEME_COLOR_PRIMARY;
-    stroke-width: 2;
-  }
+.icon-lines {
+fill: none;
+stroke: $THEME_COLOR_PRIMARY;
+stroke-width: 2;
+}
+
+.tech-logo {
+    max-width: 160px;
+    max-height: 160px;
+    filter: grayscale(100%);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

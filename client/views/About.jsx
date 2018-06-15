@@ -20,21 +20,34 @@ const ChartIconWerid = () =>
     />
 </svg>;
 
-export const About = (props) =>
-    <Row>
-        <Col md='4'>
-            <div className='text-center'>
-                <ChartIcon />
-            </div>
-        </Col>
-        <Col md='4'>
-            <div className='text-center'>
+const ChartIconMirror = () =>
+<svg width={`${iconWidth}`} height={`${iconHeight}`}>
+    <polyline
+        points="0,50 30,50 30,80 40,80 40,100 50,100 50,60 60,60 60,100 70,100, 70,30 80,30 80,100 90,100 90,80 100,80, 100,100 130,100"
+        className='animation-icon icon-lines'
+    />
+</svg>;
+
+const TechLogo = (props) => <Col md='3' className='mb-3 mt-3'>
+    <img
+        src={`./../images/${props.name}.png`}
+        alt={`${props.name} logo`}
+        className='mx-auto d-block img-fluid tech-logo'
+        title={props.name || 'logo'}
+    />
+</Col>;
+
+export const About = (props) => {
+    const logos = ['webpack', 'react', 'scss', 'less', 'jquery', 'bootstrap', 'js', 'css3', 'html5', 'express', 'nodejs', 'git'];
+    const techLogos = logos.map(tmp => <TechLogo name={tmp} key={tmp}/>);
+
+    return <React.Fragment>
+        <Row>
+            <Col md='12' className='text-center'>
                 <ChartIconWerid />
-            </div>
-        </Col>
-        <Col md='4'>
-            <div className='text-center'>
-                <ChartIcon />
-            </div>
-        </Col>
-    </Row>;
+                <h2>What I like</h2>
+            </Col>
+            {techLogos}
+        </Row>
+    </React.Fragment>;
+};
