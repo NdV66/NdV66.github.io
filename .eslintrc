@@ -1,5 +1,8 @@
 {
-    "extends": ["keystone"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "rules": {
         "indent": ["warn", 4],
         "quotes": ["error","single"],
@@ -7,5 +10,13 @@
         "space-before-function-paren": ["warn", "never"],
         "jsx-quotes": ["warn", "prefer-single"],
         "linebreak-style": 0
+    },
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
     }
 }

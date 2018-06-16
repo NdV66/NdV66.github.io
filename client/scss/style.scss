@@ -42,10 +42,7 @@ body {
     font-family: Comfortaa;
     font-weight: 100;
     line-height: 21pt;
-}
-
-main {
-    background-color: $BACKGROUND_COLOR_ACTIVE;
+    background-color: $BACKGROUND_COLOR;
 }
 
 a:active, a:visited, a:hover {
@@ -75,6 +72,10 @@ h4 {
     font-size: $BASE_FONT_SIZE * 1.4;
     font-family: Amatic;
     margin-bottom: 1rem!important;
+}
+
+.active-color-section {
+    background-color: $BACKGROUND_COLOR_ACTIVE;
 }
 
 .main-content {
@@ -109,7 +110,7 @@ h4 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 5s linear alternate infinite;
-    }
+}
 
 @keyframes dash {
     from {
@@ -121,9 +122,9 @@ h4 {
 }
 
 .icon-lines {
-fill: none;
-stroke: $THEME_COLOR_PRIMARY;
-stroke-width: 2;
+    fill: none;
+    stroke: $THEME_COLOR_PRIMARY;
+    stroke-width: 2;
 }
 
 .tech-logo {
@@ -131,6 +132,12 @@ stroke-width: 2;
     max-height: 160px;
     filter: grayscale(100%);
 }
+
+.project-logo {
+    max-width: 600px;
+    max-height: 530px;
+}
+
 
 ::-webkit-scrollbar {
     display: none;

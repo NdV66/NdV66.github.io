@@ -4,6 +4,7 @@ import {HamburgerNavbar} from './components/HamburgerNavbar.jsx';
 import {FooterElement} from './components/FooterElement.jsx';
 import {PageJumbotron} from './views/PageJumbotron.jsx';
 import {About} from './views/About.jsx';
+import {Projects} from './views/Projects.jsx';
 import {Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import './scss/style.scss';
@@ -20,11 +21,8 @@ const App = () =>
     <main className='pt-3'>
         <Container fluid={true} className='no-padding no-margin'>
             <PageJumbotron />
-
-            <Container>
-                <About />
-            </Container>
-
+            <About />
+            <Projects />
         </Container>
     </main>
 
