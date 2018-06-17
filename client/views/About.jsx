@@ -12,7 +12,7 @@ const TechLogo = (props) => <Col md='3' className='mb-3 mt-3'>
 </Col>;
 
 export const About = (props) => {
-    const logos = ['webpack', 'react', 'scss', 'less', 'jquery', 'bootstrap', 'js', 'css3', 'html5', 'express', 'nodejs', 'git'];
+    const logos = ['webpack', 'react', 'scss', 'less', 'jquery', 'bootstrap', 'js', 'css3', 'html5', 'express', 'nodejs', 'mocha','chaijs', 'git'];
     const techLogos = logos.map(tmp => <TechLogo name={tmp} key={tmp}/>);
 
     return <Container>

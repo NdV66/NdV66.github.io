@@ -36,6 +36,10 @@ $NAVBAR_HEIGHT: 80px;
     font-weight: 600;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: $BACKGROUND_COLOR;
     font-size: $BASE_FONT_SIZE;
@@ -138,7 +142,37 @@ h4 {
     max-height: 530px;
 }
 
+.project-card:hover, .tech-logo:hover {
+    animation: rotate 5s infinite;
+}
 
-::-webkit-scrollbar {
-    display: none;
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(05deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.tech-logo:hover {
+    animation: logo-rotate 4s infinite;
+}
+
+@keyframes logo-rotate {
+    0% {
+        transform: rotate(0deg);
+        filter: grayscale(100%);
+    }
+    50% {
+        transform: rotate(10deg);
+        filter: grayscale(0%);
+    }
+    100% {
+        transform: rotate(-10deg);
+        filter: grayscale(100%);
+    }
 }

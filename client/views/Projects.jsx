@@ -8,7 +8,7 @@ const ProjectCard = (props) =>
             <img
                 src={`./../images/${props.name}.jpg`}
                 alt={`${props.name} project`}
-                className='mx-auto d-block img-fluid project-logo'
+                className='mx-auto d-block img-fluid project-logo project-card'
                 title={props.name || 'project'}
             />
         </a>
