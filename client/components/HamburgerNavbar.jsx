@@ -6,7 +6,7 @@ const NavbarItem = (props) => {
     const className = props.isActive ? 'nav-link active' : 'nav-link';
 
     return <NavItem className='ml-1'>
-        <NavLink id={props.id} className={`pl-3 ${className}`} href={props.link}>
+        <NavLink className={`pl-3 ${className}`} href={`#${props.link}`} >
             <IconElement icon={props.icon} />{props.text}
         </NavLink>
     </NavItem>;
@@ -22,6 +22,10 @@ export class HamburgerNavbar extends React.Component {
         this.setState({ isOpen: !this.state.isOpen });
     }
 
+    _onClick() {
+        goToAnchor('p')
+    }
+
     render() {
         return <Navbar
             color='faded'
@@ -34,9 +38,9 @@ export class HamburgerNavbar extends React.Component {
                     <NavbarToggler onClick={() => this.toggle()} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className='ml-auto' navbar>
-                            <NavbarItem link={'#'} text={'Home'} icon={'home'} id={'home'} isActive={this.state.active}/>
-                            <NavbarItem link={'#'} text={'Technologies'} icon={'book'} id={'tech'} isActive={this.state.active}/>
-                            <NavbarItem link={'#'} text={'Projects'} icon={'user'} id={'projects'} isActive={this.state.active}/>
+                            <NavbarItem link={'home'} text={'Home'} isActive={this.state.active}/>
+                            <NavbarItem link={'technologies'} text={'Technologies'} isActive={this.state.active}/>
+                            <NavbarItem link={'projects'} text={'Projects'} isActive={this.state.active}/>
                         </Nav>
                     </Collapse>
             </Container>

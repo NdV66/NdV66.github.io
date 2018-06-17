@@ -25,7 +25,7 @@ export const Projects = (props) => {
     return <div className='mt-3 active-color-section'>
         <Container>
             <Row>
-                <Col md='12' className='text-center mb-3'>
+                <Col md='12' className='text-center mb-3' id='projects'>
                     <ChartIcon />
                     <h2>My github projects</h2>
                 </Col>

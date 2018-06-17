@@ -16,7 +16,7 @@ export const About = (props) => {
     const techLogos = logos.map(tmp => <TechLogo name={tmp} key={tmp}/>);
 
     return <Container>
-        <Row>
+        <Row id='technologies'>
             <Col md='12' className='text-center'>
                 <ChartIconWerid />
                 <h2>What I like to use</h2>

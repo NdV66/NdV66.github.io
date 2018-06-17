@@ -8,6 +8,7 @@ import {Projects} from './views/Projects.jsx';
 import {Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import './scss/style.scss';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 const App = () =>
 <React.Fragment>

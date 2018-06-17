@@ -1778,9 +1778,40 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
+component-clone@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/component-clone/-/component-clone-0.2.2.tgz#c7f5979822880fad8cfb0962ba29186d061ee04f"
+  dependencies:
+    component-type "*"
+
+component-emitter@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.0.tgz#ccd113a86388d06482d03de3fc7df98526ba8efe"
+
 component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
+
+component-raf@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/component-raf/-/component-raf-1.2.0.tgz#b2bc72d43f1b014fde7a4b3c447c764bc73ccbaa"
+
+component-tween@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/component-tween/-/component-tween-1.2.0.tgz#cc39ce5dbab05b52825f41d1947638a0b01b2b8a"
+  dependencies:
+    component-clone "0.2.2"
+    component-emitter "1.2.0"
+    component-type "1.1.0"
+    ease-component "1.0.0"
+
+component-type@*:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/component-type/-/component-type-1.2.1.tgz#8a47901700238e4fc32269771230226f24b415a9"
+
+component-type@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/component-type/-/component-type-1.1.0.tgz#95b666aad53e5c8d1f2be135c45b5d499197c0c5"
 
 compressible@~2.0.13:
   version "2.0.14"
@@ -2332,6 +2363,10 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
+
+ease-component@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ease-component/-/ease-component-1.0.0.tgz#b375726db0b5b04595b77440396fec7daa5d77c9"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
@@ -4141,6 +4176,10 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+jump.js@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.1.tgz#0de2b1631ba9a1c2c6b8572ad277d877e8503600"
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -5631,7 +5670,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -5803,6 +5842,25 @@ react-render-html@^0.6.0:
   dependencies:
     parse5 "^3.0.2"
     react-attr-converter "^0.3.1"
+
+react-scroll-to-component@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-scroll-to-component/-/react-scroll-to-component-1.0.2.tgz#f260dc936c62a53e772786d7832fe0884e195354"
+  dependencies:
+    scroll-to "0.0.2"
+
+react-scroll-to@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-scroll-to/-/react-scroll-to-1.2.2.tgz#67a3bb7eba6a4c186f553674cef141a7ebd9b46a"
+  dependencies:
+    prop-types "^15.6.1"
+
+react-scrollable-anchor@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-scrollable-anchor/-/react-scrollable-anchor-0.6.1.tgz#fd6e78026c744f76414053d06903b82adccb54d9"
+  dependencies:
+    jump.js "1.0.1"
+    prop-types "^15.5.10"
 
 react-transition-group@^2.3.1:
   version "2.3.1"
@@ -6281,6 +6339,13 @@ schema-utils@^0.4.3, schema-utils@^0.4.4, schema-utils@^0.4.5:
 scoped-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/scoped-regex/-/scoped-regex-1.0.0.tgz#a346bb1acd4207ae70bd7c0c7ca9e566b6baddb8"
+
+scroll-to@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/scroll-to/-/scroll-to-0.0.2.tgz#936d398a9133660a2492145c2c0081dfcb0728f3"
+  dependencies:
+    component-raf "1.2.0"
+    component-tween "1.2.0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
