@@ -2,9 +2,9 @@ import React from 'react';
 import {Row, Col, Container} from 'reactstrap';
 import {ChartIconWerid} from '../components/SvgIcons.jsx';
 
-const TechLogo = (props) => <Col md='3' className='mb-3 mt-3'>
+const TechLogo = (props) => <Col md='3' xs='6' className='mb-3 mt-3'>
     <img
-        src={`./../images/${props.name}.png`}
+        src={`images/${props.name}.png`}
         alt={`${props.name} logo`}
         className='mx-auto d-block img-fluid tech-logo'
         title={props.name || 'logo'}

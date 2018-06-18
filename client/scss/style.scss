@@ -101,7 +101,7 @@ h4 {
 .jumbotron {
     background-image: url(/images/1bg.svg);
     border-radius: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
 
     img {
         border-radius: 50%;
@@ -113,7 +113,7 @@ h4 {
 .animation-icon {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 5s linear alternate infinite;
+    animation: dash 4s linear alternate infinite;
 }
 
 @keyframes dash {
@@ -137,13 +137,20 @@ h4 {
     filter: grayscale(100%);
 }
 
-.project-logo {
-    max-width: 600px;
-    max-height: 530px;
+@media screen and (max-width: 768px) {
+    .tech-logo {
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+    .jumbotron img {
+        max-width: 220px;
+        max-height: 220px;
+    }
 }
 
 .project-card:hover, .tech-logo:hover {
-    animation: rotate 5s infinite;
+    animation: rotate 2s infinite;
 }
 
 @keyframes rotate {
@@ -159,7 +166,7 @@ h4 {
 }
 
 .tech-logo:hover {
-    animation: logo-rotate 4s infinite;
+    animation: logo-rotate 1.8s infinite;
 }
 
 @keyframes logo-rotate {

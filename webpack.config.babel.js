@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const productionPublicPath = '/beStarOnline';
+const productionPublicPath = '/';
 const devPublicPath = '/';
 const isDevMode = process.env.mode === 'DEV';
 console.log('------ webpack in mode: ' + process.env.mode);
@@ -72,25 +73,15 @@ const baseConfig = {
                 use: [styleLoader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(woff2|ttf|woff|eot)$/,
+                test: /\.(woff2|ttf|woff|eot|png|jpg|gif|jpeg|svg)$/,
                 loader: 'url-loader',
-            },
-            {
-                test: /\.(png|jpg|gif|jpeg|svg)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192,
-                        },
-                    },
-                ],
             },
         ],
     },
     plugins: [
         HtmlWebpackPluginConfig_Index,
         new webpack.HotModuleReplacementPlugin(),
+        new CopyWebpackPlugin([ { from: 'client/images', to: 'images' } ])
     ],
 };
 

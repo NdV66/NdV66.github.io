@@ -37,4 +37,4 @@ nbproject
 node_modules
 
 #others
-server/public/img
+dist

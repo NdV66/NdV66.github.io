@@ -7,7 +7,7 @@ const NavbarItem = (props) => {
 
     return <NavItem className='ml-1'>
         <NavLink className={`pl-3 ${className}`} href={`#${props.link}`} >
-            <IconElement icon={props.icon} />{props.text}
+            {props.text}
         </NavLink>
     </NavItem>;
 };
