@@ -3,7 +3,7 @@ import {Row, Col, Container} from 'reactstrap';
 import {ChartIcon} from '../components/SvgIcons.jsx';
 
 const ProjectCard = (props) =>
-    <Col md='6'>
+    <Col md='6' className='mb-3'>
         <a href={props.link}>
             <img
                 src={`./../images/${props.name}.jpg`}
@@ -22,7 +22,7 @@ export const Projects = (props) => {
     projects.forEach((link, key) => projects.set(key, <ProjectCard name={key} link={link}/>));
     const projectsLogos = projects.values();
 
-    return <div className='mt-3 active-color-section'>
+    return <div className='mt-3 active-color-section pb-3'>
         <Container>
             <Row>
                 <Col md='12' className='text-center mb-3' id='projects'>
