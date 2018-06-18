@@ -2,6 +2,8 @@
   "name": "narinsite",
   "version": "1.0.0",
   "private": true,
+  "author": "Narin",
+  "homepage": "http://ndv66.github.io",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -11,6 +13,7 @@
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -37,6 +40,9 @@
     "lint": "eslint .",
     "lint-file": "eslint",
     "compile": "webpack --config webpack.config.babel.js",
-    "start": "webpack-dev-server --config webpack.config.babel.js"
+    "start": "webpack-dev-server --config webpack.config.babel.js",
+    "build": "webpack",
+    "deploy": "gh-pages -d dist && rm -rf dist/",
+    "clean-gh": "rm -rf node_modules/gh-pages/.cache"
   }
 }
