@@ -16,8 +16,10 @@ const ProjectCard = (props) =>
 
 export const Projects = (props) => {
     const projects = new Map([
+        ['devNamesGenerator', 'https://dev-names-generator.herokuapp.com/#/'],
+        ['fantasyNamesGenerator', 'https://fantasy-names-generator.herokuapp.com/'],
         ['beStar', 'https://ndv66.github.io/beStarOnline/#/'],
-        ['subtle', 'https://subtlesoftwaresolutions.github.io/']
+        ['subtle', 'https://subtlesoftwaresolutions.github.io/'],
     ]);
     projects.forEach((link, key) => projects.set(key, <ProjectCard name={key} link={link}/>));
     const projectsLogos = projects.values();
