@@ -1,0 +1,49 @@
+import React from 'react';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavbarBrand, NavLink, Container } from 'reactstrap';
+import {IconElement} from './IconElement.jsx';
+
+const NavbarItem = (props) => {
+    const className = props.isActive ? 'nav-link active' : 'nav-link';
+
+    return <NavItem className='ml-1'>
+        <NavLink className={`pl-3 ${className}`} href={`#${props.link}`} >
+            {props.text}
+        </NavLink>
+    </NavItem>;
+};
+
+export class HamburgerNavbar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isOpen: false, active: null };
+    }
+
+    toggle() {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+    _onClick() {
+        goToAnchor('p')
+    }
+
+    render() {
+        return <Navbar
+            color='faded'
+            expand='md'
+            fixed='top'
+            className='custom-toggler pt-1 pb-1'>
+            <Container>
+                <NavbarBrand href='/'>
+                </NavbarBrand>
+                    <NavbarToggler onClick={() => this.toggle()} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className='ml-auto' navbar>
+                            <NavbarItem link={'home'} text={'Home'} isActive={this.state.active}/>
+                            <NavbarItem link={'technologies'} text={'Technologies'} isActive={this.state.active}/>
+                            <NavbarItem link={'projects'} text={'Projects'} isActive={this.state.active}/>
+                        </Nav>
+                    </Collapse>
+            </Container>
+        </Navbar>;
+    }
+}
